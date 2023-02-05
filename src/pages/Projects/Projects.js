@@ -6,7 +6,6 @@ function Projects() {
   return (
     <div className="App">
       <Header />
-        Project page
       <Footer />
     </div>
   );

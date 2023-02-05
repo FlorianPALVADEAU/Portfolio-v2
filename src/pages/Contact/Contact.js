@@ -6,7 +6,6 @@ function Contact() {
   return (
     <div className="App">
       <Header />
-        Contact Page
       <Footer />
     </div>
   );
