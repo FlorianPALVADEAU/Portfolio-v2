@@ -39,9 +39,7 @@ function Footer() {
 
     function select(el) {
         pages.forEach((page) => {
-            console.log(page.name, el, selectedElement !== page.name && selectedElement !== el);
             if (page.name !== selectedElement && selectedElement !== el) {
-                // console.log('la bonne page');
                 page.info(true)
             }
         })
@@ -50,7 +48,7 @@ function Footer() {
 
     return (
         <>
-            <div className="Footer">
+            <footer className="Footer">
                 <a href={'/'} className='navLink'>florian-palvadeau.com</a>
                 <div className="navBar">
                     <a href={'/' + pages[0].name} onClick={() => {select('contact')}}className={`${selectedContact ? "contact selected" : "contact"}`}>Contact</a>
@@ -63,7 +61,7 @@ function Footer() {
                     <a href="https://www.linkedin.com/in/florian-palvadeau/" target={"_blank"} rel="noreferrer"><img src={linkedin_icon} alt="linkedin_icon"/></a>
                     <a href={CV_PALVADEAU_FLORIAN} target={"_blank"} rel="noreferrer"><img src={cv_icon} alt="cv_icon" className="cv_icon"/></a>
                 </div>
-            </div>
+            </footer>
         </>
     );
   }
