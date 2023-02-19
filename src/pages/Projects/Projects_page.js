@@ -6,9 +6,10 @@ import React from 'react';
 import contentAnimation from '../../js/contentAnimation';
 import PageTransition from '../../js/pageTransition';
 import delay from '../../js/delay';
+import Projects from '../../components/Projects';
 
 
-function Projects() {
+function Project_page() {
   const ref = React.useRef(null);
   const svg = React.useRef(null);
 
@@ -39,10 +40,11 @@ function Projects() {
     </div>
     <div className="Projects" data-barba="container" data-barba-namespace="wipe">
       <Header />
+      <Projects />
       <Footer />
     </div>
     </>
   );
 }
 
-export default Projects;
+export default Project_page;

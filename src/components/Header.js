@@ -1,14 +1,16 @@
 import '../style/Main.scoped.scss'
 import photoMe from '../assets/photoMe.png'
-import homeNavBar from './homeNavBar';
 import React from 'react';
 import { useState } from 'react';
 import { useEffect } from "react";
-
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 function Header() {
   const lastURLElement = window.location.href.substring(window.location.href.lastIndexOf('/') + 1)
   const [selectedElement, setSelectedElement] = useState(lastURLElement)
+  gsap.registerPlugin(ScrollTrigger)
+
   const circle = React.useRef(null);
   const navBar = React.useRef(null);
   const navBar2 = React.useRef(null);
@@ -32,6 +34,9 @@ function Header() {
     }
   }, [selectedElement])
 
+  function handleClick(e) {
+    console.log(e.target);
+  }
   
 
   return (
@@ -85,25 +90,25 @@ function Header() {
             </svg>
             <div ref={navBar} className="navBar">
               <div className="element">
-                <a href="#aboutMe">About Me</a>
+                <a className="headerLink" onClick={(e) => {handleClick(e)}} href="#aboutMe">About Me</a>
                 <span></span>
               </div>
               <div className="element">
-                <a href="#studies">My Studies</a>
+                <a className="headerLink" onClick={(e) => {handleClick(e)}} href="#studies">My Studies</a>
                 <span></span>
               </div>
               <div className="element">
-                <a href="#skills">My Skills</a>
+                <a className="headerLink" onClick={(e) => {handleClick(e)}} href="#skills">My Skills</a>
                 <span></span>
               </div>
             </div>
             <div ref={navBar2} className="navBar">
               <div className="element">
-                <a href="#formContact">Contact Form</a>
+                <a className="headerLink" onClick={(e) => {handleClick(e)}} href="#formContact">Contact Form</a>
                 <span></span>
               </div>
               <div className="element">
-                <a href="#moreInfoContact">More Infos</a>
+                <a className="headerLink" onClick={(e) => {handleClick(e)}} href="#moreInfoContact">More Infos</a>
                 <span></span>
               </div>
             </div>
