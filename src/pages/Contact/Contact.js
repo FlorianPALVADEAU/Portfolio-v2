@@ -7,25 +7,31 @@ import contentAnimation from '../../js/contentAnimation';
 import PageTransition from '../../js/pageTransition';
 import delay from '../../js/delay';
 import emailjs from '@emailjs/browser';
-import { useRef } from 'react';
-
 
 function Contact() {
   const ref = React.useRef(null);
   const svg = React.useRef(null);
-  const form = useRef();
+  const form = React.useRef(null);
+  const input1 = React.useRef(null);
+  const input2 = React.useRef(null);
+  const input3 = React.useRef(null);
+
 
   const sendEmail = (e) => {
     e.preventDefault();
 
+
     emailjs.sendForm('service_strkf42', 'template_ka44otn', form.current, 'LAg0wiCOFY0B9vnzr')
       .then((result) => {
-          console.log(result.text);
+        console.log(result, "Successfully sent !");
+        input1.current.value = ""
+        input2.current.value = ""
+        input3.current.value = ""
       }, (error) => {
-          console.log(error.text);
+        console.log(error.text);
       });
-  };
 
+  };
   barba.init({
     sync: true,
     transitions: [
@@ -56,11 +62,12 @@ function Contact() {
       <h2 className='h2Contact'>Contact Me.</h2>
         <form id="formContact" ref={form} onSubmit={sendEmail}>
           <label>Name</label>
-          <input type="text" name="user_name" placeholder='Frédéric Mousseau'/>
+          <input ref={input1} type="text" name="user_name" placeholder='Frédéric Mousseau'/>
           <label>Email</label>
-          <input type="email" name="user_email" placeholder='frederic.mousseau@gmail.com'/>
+          <input ref={input2} type="email" name="user_email" placeholder='frederic.mousseau@gmail.com'/>
           <label>Message</label>
-          <textarea name="user_message" placeholder='Your message here...'/>
+          <textarea ref={input3} name="user_message" placeholder='Your message here...'/>
+          <input type="hidden" name="from_name" value='Florian'/>
           <input type="submit" value="Send" />
         </form>
         <div id="moreInfoContact" className="adress">

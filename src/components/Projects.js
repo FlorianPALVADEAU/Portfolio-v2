@@ -69,7 +69,7 @@ function Projects() {
         var item = json[Math.floor(Math.random()*json.length)];
         var item2 = json[Math.floor(Math.random()*json.length)];
         while (item === item2) {
-            var item2 = json[Math.floor(Math.random()*json.length)];
+            item2 = json[Math.floor(Math.random()*json.length)];
         }
 
         return (
@@ -78,7 +78,7 @@ function Projects() {
                 <iframe src={props.project.VideoLink} title={props.project.Name} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                 <div className='projectContent'>
                     <h2>{props.project.FullName}.</h2>
-                    <p className='desc'>{props.project.FullDescription} {props.project.link ? <a href={props.project.link} target='_blank'>see my dropbox.</a> : ''} {props.project.linkCars ? <a href={props.project.linkCars} target='_blank'>See my post about this project.</a> : ''}</p>
+                    <p className='desc'>{props.project.FullDescription} {props.project.link ? <a href={props.project.link} target='_blank' rel='noreferrer'>see my dropbox.</a> : ''} {props.project.linkCars ? <a href={props.project.linkCars} target='_blank' rel='noreferrer'>See my post about this project.</a> : ''}</p>
                     <div className='projectInfo'>
                         <p>Difficulty : {props.project.Difficulty}</p>
                         <p>Client : {props.project.Client}</p>
