@@ -38,8 +38,8 @@ function Projects() {
                 project.append(projectImage, projectContent)
                 project.addEventListener("click", () => {
                     setProject(json[elIndex])
-                    handleClick(elIndex)
                 })
+                handleClick(elIndex)
                 container.current.append(project)
             });
             counter++
@@ -59,17 +59,42 @@ function Projects() {
         singleProject.current.style.display = "none"
         container.current.style.removeProperty('display')
     }
-    function HandleClick(props){
+    function handleMoreProjects(item){
+        var elIndex = json.findIndex(object => {return object.Name === item.Name})
+        close()
+        setProject(json[elIndex])
+        handleClick()
+    }
+    function SingleProject(props){
+        var item = json[Math.floor(Math.random()*json.length)];
+        var item2 = json[Math.floor(Math.random()*json.length)];
+        while (item === item2) {
+            var item2 = json[Math.floor(Math.random()*json.length)];
+        }
+
         return (
             <>
                 <button onClick={() => {close()}}>← go back</button>
                 <iframe src={props.project.VideoLink} title={props.project.Name} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                 <div className='projectContent'>
-                    <h1>{props.project.FullName}</h1>
-                    <p>{props.project.FullDescription}</p>
+                    <h2>{props.project.FullName}.</h2>
+                    <p className='desc'>{props.project.FullDescription} {props.project.link ? <a href={props.project.link} target='_blank'>see my dropbox.</a> : ''} {props.project.linkCars ? <a href={props.project.linkCars} target='_blank'>See my post about this project.</a> : ''}</p>
                     <div className='projectInfo'>
                         <p>Difficulty : {props.project.Difficulty}</p>
                         <p>Client : {props.project.Client}</p>
+                    </div>
+                </div>
+                <div className='moreProjects'>
+                    <h3>More projects.</h3>
+                    <div className='content'>
+                        <a onClick={() => {handleMoreProjects(item)}} className='project first'>
+                            <img src={item.Thumbnail} alt={item.Name} />
+                            <h4>{item.Name}</h4>
+                        </a>
+                        <a onClick={() => {handleMoreProjects(item2)}} className='project second'>
+                            <img src={item2.Thumbnail} alt={item2.Name} />
+                            <h4>{item2.Name}</h4>
+                        </a>
                     </div>
                 </div>
             </>
@@ -80,8 +105,8 @@ function Projects() {
         <>
         <div className='projectsContainer' ref={container}>
         </div>
-        <div className='projectsContainer aa' ref={singleProject} style={{display : "none"}}>
-            <HandleClick project={project} />
+        <div className='singleProject' ref={singleProject} style={{display : "none"}}>
+            <SingleProject project={project} />
         </div>
         </>
     );

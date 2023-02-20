@@ -379,19 +379,18 @@ body {
     .projectsContainer{
         font-family: 'Poppins', sans-serif;
         margin-bottom: 20vh;
-        width: 80vw;
+        width: 90vw;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
         .project{
             width: 100%;
-            height: 70vh;
+            height: 50vh;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            overflow:hidden;
-            margin-top: 35vh;
+            margin-top: 10vh;
             cursor: pointer;
             img{
                 width: 50%;
@@ -407,17 +406,17 @@ body {
                 display: flex;
                 justify-content: space-around;
                 align-items: flex-end;
-                flex-direction: column;
-                padding: 50px;
+                flex-direction: column;    
                 background-color: #d9dee9;
                 text-align: right;
+                padding-inline: 50px;
                 h2{
                     font-size: 55px;
                     font-weight: 500;
                     margin-top: 10%;
                 }
                 p{
-                    margin-top: -15%;
+                    margin-top: -13%;
                     font-size: 16px;
                     font-weight: 300;
                     font-style: italic;
@@ -428,12 +427,17 @@ body {
                     justify-content: flex-end;
                     flex-wrap: wrap;
                     li{
+                        margin-right: 0;
                         margin-left: 15%;
                         font-size: 14px;
                         font-style: italic;
                         font-weight: 200;
                         margin-bottom: 5%;
                     }
+                    :nth-child(1){
+                        margin: 0;
+                    }
+
                 }
             }
         }
@@ -448,6 +452,103 @@ body {
                         margin-left: 0;
                         margin-right: 15%;
                     }
+                    :nth-last-child(1){
+                        margin: 0;
+                    }
+                    :nth-child(1){
+                        margin-left: 0;
+                        margin-right: 15%;
+                    }
+                }
+            }
+        }
+    }
+    .singleProject{
+        width: 80vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-family: 'Poppins', sans-serif;
+        margin-bottom: 30vh;
+        button{
+            position: relative;
+            top: 4vh;
+            left: -45.5%;
+            width: 10vw;
+            height: 4vh;
+            text-transform: uppercase;
+            color: white;
+            background-color: #1E202B;
+            border: 0;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        iframe{
+            width: 70%;
+            height: 55vh;
+        }
+        .projectContent{
+            margin-top: 5vh;
+            width: 70%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+            h2{
+                font-size: 35px;
+                font-weight: 500;
+                margin-bottom: 3vh;
+            }
+            .desc{
+                font-size: 16px;
+                line-height: 20px;
+                margin-bottom: 3vh;
+            }
+            .projectInfo{
+                width: 50%;
+                display: flex;
+                justify-content: space-between;
+                font-size: 14px;
+                font-style: italic;
+                font-weight: 300;
+            }
+        }
+        .moreProjects{
+            width: 70%;
+            display: flex;
+            justify-content: space-around;
+            height: 20vh;
+            margin-top: 15vh;
+            flex-direction: column;
+            align-items: center;
+            h3{
+                font-size: 20px;
+                font-weight: 300;
+                margin-bottom: 5%;
+            }
+            .content{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                .project{
+                    height: 100%;
+                    width: 30%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    padding: 10px;
+                    background-color: #e7f0ff;
+                    box-shadow: 0px 5px 7px rgba(0,0,0, 0.05);
+                    cursor: pointer;
+                }
+                img{
+                    height: 70%;
+                    margin-bottom: 2vh;
                 }
             }
         }
@@ -689,6 +790,70 @@ body {
                 }
             }
         }
+        .projectsContainer{
+            margin-bottom: 20vh;
+            width: 90vw;
+            flex-direction: column;
+            .project{
+                width: 100%;
+                height: 50vh;
+                display: flex;
+                justify-content: space-between;
+                margin-top: 10vh;
+                img{
+                    width: 50%;
+                    height: 100%;
+                }
+                div{
+                    width: 50%;
+                    height: 100%;
+                    padding-inline: 50px;
+                    h2{
+                        font-size: 45px;
+                        font-weight: 500;
+                        margin-top: 10%;
+                    }
+                    p{
+                        margin-top: -13%;
+                        font-size: 16px;
+                        font-weight: 300;
+                    }
+                    ul{
+                        width: 100%;
+                        li{
+                            margin-right: 0;
+                            margin-left: 15%;
+                            font-size: 12px;
+                        }
+                        :nth-child(1){
+                            margin: 0;
+                        }
+    
+                    }
+                }
+            }
+            :nth-child(even){
+                flex-direction: row-reverse;
+                div{
+                    text-align: left;
+                    align-items: flex-start;
+                    ul{
+                        justify-content: flex-start;
+                        li{
+                            margin-left: 0;
+                            margin-right: 15%;
+                        }
+                        :nth-last-child(1){
+                            margin: 0;
+                        }
+                        :nth-child(1){
+                            margin-left: 0;
+                            margin-right: 15%;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 @media screen and (max-width: 1000px) {
@@ -818,6 +983,99 @@ body {
                 }
             }
         }
+        .projectsContainer{
+            width: 95vw;
+        }
+        .singleProject{
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-family: 'Poppins', sans-serif;
+            margin-bottom: 30vh;
+            button{
+                position: relative;
+                top: -4vh;
+                left: -35%;
+                width: 15vw;
+                height: 4vh;
+                text-transform: uppercase;
+                color: white;
+                background-color: #1E202B;
+                border: 0;
+                font-size: 14px;
+                cursor: pointer;
+            }
+            iframe{
+                width: 85%;
+                height: 55vh;
+            }
+            .projectContent{
+                margin-top: 5vh;
+                width: 80%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                flex-direction: column;
+                h2{
+                    font-size: 45px;
+                    font-weight: 500;
+                    margin-bottom: 3vh;
+                }
+                .desc{
+                    font-size: 20px;
+                    line-height: 23px;
+                    margin-bottom: 3vh;
+                }
+                .projectInfo{
+                    width: 60%;
+                    display: flex;
+                    justify-content: space-between;
+                    font-size: 16px;
+                    font-style: italic;
+                    font-weight: 300;
+                }
+            }
+            .moreProjects{
+                width: 80%;
+                display: flex;
+                justify-content: space-around;
+                height: 20vh;
+                margin-top: 15vh;
+                flex-direction: column;
+                align-items: center;
+                h3{
+                    font-size: 20px;
+                    font-weight: 300;
+                    margin-bottom: 5%;
+                }
+                .content{
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    .project{
+                        height: 100%;
+                        width: 40%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                        padding: 10px;
+                        background-color: #e7f0ff;
+                        box-shadow: 0px 5px 7px rgba(0,0,0, 0.05);
+                        cursor: pointer;
+                    }
+                    img{
+                        height: 70%;
+                        margin-bottom: 2vh;
+                    }
+                }
+            }
+        }
     }
 }
 @media screen and (max-width: 800px) {
@@ -943,6 +1201,129 @@ body {
                 p{
                     font-size: 12px;
                     line-height: 25px;
+                }
+            }
+        }
+        .projectsContainer{
+            margin-bottom: 20vh;
+            width: 100vw;
+            flex-direction: column;
+            .project{
+                height: 60vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+                margin-top: 5vh;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+                div{
+                    width: 100%;
+                    height: 100%;
+                    align-items: center;
+                    h2{
+                        font-size: 35px;
+                        margin-top: 0%;
+                    }
+                    p{
+                        margin-top: -2%;
+                    }
+                    ul{
+                        justify-content: center;
+    
+                    }
+                }
+            }
+        }
+        .singleProject{
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-family: 'Poppins', sans-serif;
+            margin-bottom: 30vh;
+            button{
+                position: relative;
+                top: -4vh;
+                left: -30%;
+                width: 30vw;
+                height: 4vh;
+                text-transform: uppercase;
+                color: white;
+                background-color: #1E202B;
+                border: 0;
+                font-size: 14px;
+                cursor: pointer;
+            }
+            iframe{
+                width: 90%;
+                height: 30vh;
+            }
+            .projectContent{
+                margin-top: 5vh;
+                width: 90%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                flex-direction: column;
+                h2{
+                    font-size: 20px;
+                    font-weight: 500;
+                    margin-bottom: 3vh;
+                }
+                .desc{
+                    font-size: 14px;
+                    line-height: 23px;
+                    margin-bottom: 3vh;
+                }
+                .projectInfo{
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    font-size: 12px;
+                    font-style: italic;
+                    font-weight: 300;
+                }
+            }
+            .moreProjects{
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
+                height: 20vh;
+                margin-top: 15vh;
+                flex-direction: column;
+                align-items: center;
+                h3{
+                    font-size: 20px;
+                    font-weight: 300;
+                    margin-bottom: 5%;
+                }
+                .content{
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    .project{
+                        height: 100%;
+                        width: 40%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                        padding: 10px;
+                        background-color: #e7f0ff;
+                        box-shadow: 0px 5px 7px rgba(0,0,0, 0.05);
+                        cursor: pointer;
+                    }
+                    img{
+                        height: 70%;
+                        margin-bottom: 2vh;
+                    }
                 }
             }
         }
