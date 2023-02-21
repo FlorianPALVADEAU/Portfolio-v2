@@ -45,11 +45,12 @@ function Contact() {
     emailjs.sendForm('service_strkf42', 'template_ka44otn', form.current, 'LAg0wiCOFY0B9vnzr')
       .then((result) => {
         console.log(result, "Successfully sent !");
-        input1.current.value = ""
-        input2.current.value = ""
-        input3.current.value = ""
+        form.current.style = 'display: flex; justify-content: center; align-items: center; background-color: #76C776; color: #fff; font-size: 20px;'
+        form.current.innerHTML = ' <p>😊</p><h3 style="margin-top: 2%">Mail Sent Successfully!</h3><p style="font-size: 14px; font-style: italic; margin-top: 2%">Thank you</p>'
       }, (error) => {
         console.log(error.text);
+        form.current.style = 'display: flex; justify-content: center; align-items: center; background-color: #C93A3B; color: #fff; font-size: 20px;'
+        form.current.innerHTML = ' <p>😕</p><h3 style="margin-top: 2%">Uh oh... Something went wrong.</h3><p style="font-size: 14px; font-style: italic; margin-top: 2%">Try again later !</p>'
       });
 
   };
