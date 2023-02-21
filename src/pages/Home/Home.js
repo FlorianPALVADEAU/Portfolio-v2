@@ -7,31 +7,34 @@ import React from 'react';
 import contentAnimation from '../../js/contentAnimation';
 import PageTransition from '../../js/pageTransition';
 import delay from '../../js/delay';
+import { useEffect } from "react";
 
 
 function Home() {
   const ref = React.useRef(null);
   const svg = React.useRef(null);
 
-  barba.init({
-    sync: true,
-    transitions: [
-      {
-        async leave() {
-          const done = this.async();
-          PageTransition()
-          await delay(1000);
-          done();
-        },
-        async enter() {
-          contentAnimation(ref.current, svg.current)
-        },
-        async once() {
-          contentAnimation(ref.current, svg.current)
+  useEffect(()=>{
+    barba.init({
+      sync: true,
+      transitions: [
+        {
+          async leave() {
+            const done = this.async();
+            PageTransition()
+            await delay(1000);
+            done();
+          },
+          async enter() {
+            contentAnimation(ref.current, svg.current)
+          },
+          async once() {
+            contentAnimation(ref.current, svg.current)
+          }
         }
-      }
-    ]
-  })
+      ]
+    })
+  },[])
 
   return (
     <>

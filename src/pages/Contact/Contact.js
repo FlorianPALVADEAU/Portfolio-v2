@@ -7,6 +7,7 @@ import contentAnimation from '../../js/contentAnimation';
 import PageTransition from '../../js/pageTransition';
 import delay from '../../js/delay';
 import emailjs from '@emailjs/browser';
+import { useEffect } from "react";
 
 function Contact() {
   const ref = React.useRef(null);
@@ -16,10 +17,30 @@ function Contact() {
   const input2 = React.useRef(null);
   const input3 = React.useRef(null);
 
+  useEffect(()=>{
+    barba.init({
+      sync: true,
+      transitions: [
+        {
+          async leave() {
+            const done = this.async();
+            PageTransition()
+            await delay(1000);
+            done();
+          },
+          async enter() {
+            contentAnimation(ref.current, svg.current)
+          },
+          async once() {
+            contentAnimation(ref.current, svg.current)
+          }
+        }
+      ]
+    })
+  },[])
 
   const sendEmail = (e) => {
     e.preventDefault();
-
 
     emailjs.sendForm('service_strkf42', 'template_ka44otn', form.current, 'LAg0wiCOFY0B9vnzr')
       .then((result) => {
@@ -32,25 +53,6 @@ function Contact() {
       });
 
   };
-  barba.init({
-    sync: true,
-    transitions: [
-      {
-        async leave() {
-          const done = this.async();
-          PageTransition()
-          await delay(1000);
-          done();
-        },
-        async enter() {
-          contentAnimation(ref.current, svg.current)
-        },
-        async once() {
-          contentAnimation(ref.current, svg.current)
-        }
-      }
-    ]
-  })
   return (
     <>
     <div className="wipe-transition" ref={ref}>

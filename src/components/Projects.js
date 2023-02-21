@@ -40,19 +40,24 @@ function Projects() {
                     setProject(json[elIndex])
                     handleClick(elIndex)
                 })
+                project.addEventListener("touchstart", () => {
+                    setProject(json[elIndex])
+                    handleClick(elIndex)
+                })
                 container.current.append(project)
             });
             counter++
         }
     },[])
 
-
     function handleClick(){
+        window.scrollTo(0, 0);
         setSelected(true)
         container.current.style.display = "none"
         singleProject.current.style.removeProperty('display')
     }
     function close(){
+        window.scrollTo(0, 0);
         setSelected(false)
         singleProject.current.style.display = "none"
         container.current.style.removeProperty('display')
