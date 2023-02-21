@@ -38,17 +38,15 @@ function Projects() {
                 project.append(projectImage, projectContent)
                 project.addEventListener("click", () => {
                     setProject(json[elIndex])
+                    handleClick(elIndex)
                 })
-                handleClick(elIndex)
                 container.current.append(project)
             });
             counter++
         }
     },[])
 
-    // function Welcome(props) {
-    //     return <h1>Bonjour, {props.name}</h1>;
-    // }
+
     function handleClick(){
         setSelected(true)
         container.current.style.display = "none"

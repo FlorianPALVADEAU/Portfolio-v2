@@ -2,6 +2,9 @@ import '../style/Main.scoped.scss'
 import '../style/TimeLine.scoped.scss'
 import { Chart as ChartJS } from 'chart.js/auto'
 import { Bar } from 'react-chartjs-2';
+// import '../js/skewEffect'
+
+
 
 
 function Main() {
@@ -27,7 +30,6 @@ function Main() {
         borderWidth: 1
       }]
     };
-    
 
 
 
