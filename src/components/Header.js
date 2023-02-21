@@ -46,9 +46,9 @@ function Header() {
             <div ref={header} className='headerDesc'>
               <h1>Hello.</h1>
               <div className="nameDesc">
-                      <p className='name'>Florian PALVADEAU.</p>
-                      <span></span>
-                      <p className='desc'>A creative front-end developer.</p>
+                <p className='name'>Florian PALVADEAU.</p>
+                <span></span>
+                <p className='desc'>A creative front-end developer.</p>
               </div>
             </div>
             <img src={photoMe} alt ="profile picture"/>

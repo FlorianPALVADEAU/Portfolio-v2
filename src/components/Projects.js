@@ -40,10 +40,6 @@ function Projects() {
                     setProject(json[elIndex])
                     handleClick(elIndex)
                 })
-                project.addEventListener("touchstart", () => {
-                    setProject(json[elIndex])
-                    handleClick(elIndex)
-                })
                 container.current.append(project)
             });
             counter++
@@ -51,7 +47,7 @@ function Projects() {
     },[])
 
     function handleClick(){
-        window.scrollTo(0, 0);
+        window.scrollTo(0, 750);
         setSelected(true)
         container.current.style.display = "none"
         singleProject.current.style.removeProperty('display')
