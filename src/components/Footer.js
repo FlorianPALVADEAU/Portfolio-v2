@@ -38,6 +38,7 @@ function Footer() {
     }
 
     function select(el) {
+        el.click()
         pages.forEach((page) => {
             if (page.name !== selectedElement && selectedElement !== el) {
                 page.info(true)
@@ -51,8 +52,8 @@ function Footer() {
             <footer className="Footer">
                 <a href={'/'} className='navLink'>florian-palvadeau.com</a>
                 <div className="navBar">
-                    <a href={'/' + pages[0].name} onClick={() => {select('contact')}}className={`${selectedContact ? "contact selected" : "contact"}`}>Contact</a>
-                    <a href={'/'} onClick={() => {select('')}}className={`${selectedHome ? "home selected" : "home"}`}>Home</a>
+                    <a href={'/' + pages[0].name} onClick={() => {select('contact')}} className={`${selectedContact ? "contact selected" : "contact"}`}>Contact</a>
+                    <a href={'/'} onClick={() => {select('')}} className={`${selectedHome ? "home selected" : "home"}`}>Home</a>
                     <a href={'/' + pages[2].name} onClick={() => {select('projects')}} className={`${selectedProjects ? "projects selected" : "projects"}`}>Projects</a>
                 </div>
                 <div className="icons">
