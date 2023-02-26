@@ -2,6 +2,7 @@ import ScreenShot_sqy from '../assets/Screenshot_sqy.png'
 import Screenshot_eiffel from '../assets/Screenshot_eiffel.png'
 import Screenshot_a1 from '../assets/Screenshot_a1.png'
 import Screenshot_dashboard from '../assets/Screenshot_dashboard.png'
+import Screenshot_sl from '../assets/Screenshot_sl.png'
 
 const json = [
     {
@@ -65,9 +66,9 @@ const json = [
         ],
         "Difficulty" : "Hard",
         "Client" : "StarTourisme Services",
-    }, 
+    },
     {
-        "Thumbnail" : Screenshot_a1,
+        "Thumbnail" : Screenshot_sl,
         "Name": "Doctor's website.",
         "QuickDescription": "Professional website for a Shiatsu doctor.",
         "FullName" : "Personal Website for a Professional Shiatsu doctor",
