@@ -3,8 +3,57 @@ import Screenshot_eiffel from '../assets/Screenshot_eiffel.png'
 import Screenshot_a1 from '../assets/Screenshot_a1.png'
 import Screenshot_dashboard from '../assets/Screenshot_dashboard.png'
 import Screenshot_sl from '../assets/Screenshot_sl.png'
+import Screenshot_ns from '../assets/Screenshot_nuxt_strapi.png'
 
 const json = [
+    {
+        "Thumbnail" : Screenshot_ns,
+        "Name": "Nuxt - Strapi.",
+        "QuickDescription": "Recreacting this portfolio with nuxt and strapi.",
+        "FullName" : "Another version of my portfolio",
+        "FullDescription" : "This projet has been done during a headless CMS course. It made me discover Strapi and Nuxt, in addition of Supabase. I really enjoyed working on it, and i may do some freelance projects with this kind of technologies.",
+        "VideoLink" : "Currently unavailable",
+        "Technologies" : [
+            "Nuxt.js",
+            "Strapi",
+            "SCSS",
+            "SupaBase",
+        ],
+        "Difficulty" : "Medium",
+        "Client" : "None",
+    },
+    {
+        "Thumbnail" : Screenshot_sl,
+        "Name": "Doctor's website.",
+        "QuickDescription": "Professional website for a Shiatsu doctor.",
+        "FullName" : "Personal Website for a Professional Shiatsu doctor",
+        "FullDescription" : "This project is kind of a portfolio for a shiatsu doctor. I worked really hard with the SEO of it, and i'm proud that i made this Shiatsu doctor happy about his website.",
+        "VideoLink" : "Currently unavailable",
+        "Technologies" : [
+            "React",
+            "SCSS",
+            "Barba.JS",
+            "GSAP",
+        ],
+        "Difficulty" : "Medium",
+        "Client" : "Sandrine LABAT",
+    },
+    {
+        "Thumbnail" : Screenshot_dashboard,
+        "Name": "Luxury Cars.",
+        "QuickDescription": "A platform to manage car rentals.",
+        "FullName" : "A platform to manage the rentals of a luxury car rental company",
+        "FullDescription" : "This project has been realized during my second year at IIM, the goal was to resolve a real client's problem. Me and my team had to help our client to manage his retals. In addition, we've been elected as the best project of the year in my school ! I'm very proud of it. This project was very formative, it allowed me to work by myself even if i didn't know how to do or anything, i learnt to study and search all by my side.",
+        "linkCars" : 'https://www.linkedin.com/posts/florianpalvadeau_developpementweb-developpeur-gestiondeprojet-activity-6932660992354992128-jXUs?utm_source=share&utm_medium=member_desktop',
+        "VideoLink" : "https://www.youtube.com/embed/9LubV_O1AOo",
+        "Technologies" : [
+            "Laravel",
+            "TailWind",
+            "MySQL",
+        ],
+        "Difficulty" : "Hard",
+        "Client" : "StarTourisme Services",
+    },
     {
         "Thumbnail" : ScreenShot_sqy,
         "Name": "Innovative Map.",
@@ -35,7 +84,7 @@ const json = [
             "MySQL",
         ],
         "Difficulty" : "Easy",
-        "Client" : "",
+        "Client" : "None",
     }, 
     {
         "Thumbnail" : Screenshot_a1,
@@ -51,38 +100,6 @@ const json = [
         "Difficulty" : "Undefined",
         "Client" : "None",
     }, 
-    {
-        "Thumbnail" : Screenshot_dashboard,
-        "Name": "Luxury Cars.",
-        "QuickDescription": "A platform to manage car rentals.",
-        "FullName" : "A platform to manage the rentals of a luxury car rental company",
-        "FullDescription" : "This project has been realized during my second year at IIM, the goal was to resolve a real client's problem. Me and my team had to help our client to manage his retals. In addition, we've been elected as the best project of the year in my school ! I'm very proud of it. This project was very formative, it allowed me to work by myself even if i didn't know how to do or anything, i learnt to study and search all by my side.",
-        "linkCars" : 'https://www.linkedin.com/posts/florianpalvadeau_developpementweb-developpeur-gestiondeprojet-activity-6932660992354992128-jXUs?utm_source=share&utm_medium=member_desktop',
-        "VideoLink" : "https://www.youtube.com/embed/9LubV_O1AOo",
-        "Technologies" : [
-            "Laravel",
-            "TailWind",
-            "MySQL",
-        ],
-        "Difficulty" : "Hard",
-        "Client" : "StarTourisme Services",
-    },
-    {
-        "Thumbnail" : Screenshot_sl,
-        "Name": "Doctor's website.",
-        "QuickDescription": "Professional website for a Shiatsu doctor.",
-        "FullName" : "Personal Website for a Professional Shiatsu doctor",
-        "FullDescription" : "This project is kind of a portfolio for a shiatsu doctor. I worked really hard with the SEO of it, and i'm proud that i made this Shiatsu doctor happy about his website.",
-        "VideoLink" : "Currently unavailable",
-        "Technologies" : [
-            "React",
-            "SCSS",
-            "Barba.JS",
-            "GSAP",
-        ],
-        "Difficulty" : "Medium",
-        "Client" : "Sandrine LABAT",
-    }
 ]
 
 if (localStorage.getItem("json") === null) {
