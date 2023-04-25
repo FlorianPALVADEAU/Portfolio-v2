@@ -4,6 +4,7 @@ import Screenshot_a1 from '../assets/Screenshot_a1.png'
 import Screenshot_dashboard from '../assets/Screenshot_dashboard.png'
 import Screenshot_sl from '../assets/Screenshot_sl.png'
 import Screenshot_ns from '../assets/Screenshot_nuxt_strapi.png'
+import ScreenShot_sg from '../assets/Screenshot_snake_game.png'
 
 const json = [
     {
@@ -12,7 +13,7 @@ const json = [
         "QuickDescription": "Recreacting this portfolio with nuxt and strapi.",
         "FullName" : "Another version of my portfolio",
         "FullDescription" : "This projet has been done during a headless CMS course. It made me discover Strapi and Nuxt, in addition of Supabase. I really enjoyed working on it, and i may do some freelance projects with this kind of technologies.",
-        "VideoLink" : "Currently unavailable",
+        "VideoLink" : "https://www.youtube.com/watch?v=n10SYY55X8p",
         "Technologies" : [
             "Nuxt.js",
             "Strapi",
@@ -28,7 +29,7 @@ const json = [
         "QuickDescription": "Professional website for a Shiatsu doctor.",
         "FullName" : "Personal Website for a Professional Shiatsu doctor",
         "FullDescription" : "This project is kind of a portfolio for a shiatsu doctor. I worked really hard with the SEO of it, and i'm proud that i made this Shiatsu doctor happy about his website.",
-        "VideoLink" : "Currently unavailable",
+        "VideoLink" : "https://www.youtube.com/watch?v=n10SYY55X8p",
         "Technologies" : [
             "React",
             "SCSS",
@@ -69,6 +70,20 @@ const json = [
         ],
         "Difficulty" : "Medium",
         "Client" : "Saint-Quentin-En-Yvelines",
+    }, 
+    {
+        "Thumbnail" : ScreenShot_sg,
+        "Name": "Snake Game.",
+        "QuickDescription": "The classic game made in python.",
+        "FullName" : "The Snake Game",
+        "FullDescription" : "During a python lesson, we had 2 days to make a working snake game. I did not really enjoyed it, since i prefer front-end development, but it was still really interesting and fun.",
+        "VideoLink" : "https://www.youtube.com/watch?v=n10SYY55X8p",
+        "Technologies" : [
+            "Python",
+            "PYGame"
+        ],
+        "Difficulty" : "Medium",
+        "Client" : "None",
     }, 
     {
         "Thumbnail" : Screenshot_eiffel,
